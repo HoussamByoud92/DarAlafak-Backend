@@ -14,15 +14,16 @@ class BlogPost extends Model implements HasMedia
     use HasFactory, HasSlug, InteractsWithMedia;
 
     protected $fillable = [
-        'title', 'slug', 'content', 'excerpt', 'featured_image',
+        'title', 'slug', 'content', 'excerpt',
         'author_id', 'category_id', 'is_published', 'is_featured',
-        'views_count', 'published_at'
+        'views_count', 'published_at', 'tags'
     ];
 
     protected $casts = [
         'is_published' => 'boolean',
         'is_featured' => 'boolean',
         'published_at' => 'datetime',
+        'tags' => 'array',
     ];
 
     public function getSlugOptions(): SlugOptions

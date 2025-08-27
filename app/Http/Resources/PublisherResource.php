@@ -12,7 +12,7 @@ class PublisherResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'slug' => $this->slug,
-            'logo' => $this->logo,
+            'logo' => $this->getFirstMediaUrl('logo') ?: null,
             'description' => $this->description,
             'website' => $this->website,
             'email' => $this->email,

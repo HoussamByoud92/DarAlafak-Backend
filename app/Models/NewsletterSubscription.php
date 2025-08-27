@@ -10,18 +10,19 @@ class NewsletterSubscription extends Model
     use HasFactory;
 
     protected $fillable = [
-        'email', 'name', 'is_active', 'subscribed_at', 'unsubscribed_at'
+        'email',
+        'name',
+        'subscribed_at',
+        'unsubscribed_at',
+        'is_active'
     ];
 
     protected $casts = [
-        'is_active' => 'boolean',
         'subscribed_at' => 'datetime',
         'unsubscribed_at' => 'datetime',
+        'is_active' => 'boolean',
     ];
 
-    // Scopes
-    public function scopeActive($query)
-    {
-        return $query->where('is_active', true);
-    }
+    // Disable timestamps since we have custom datetime fields
+    public $timestamps = false;
 }

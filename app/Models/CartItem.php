@@ -10,7 +10,7 @@ class CartItem extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'session_id', 'book_id', 'quantity'
+        'user_id', 'session_id', 'book_id', 'quantity', 'front_image'
     ];
 
     // Relationships

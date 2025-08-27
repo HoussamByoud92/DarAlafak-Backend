@@ -24,7 +24,8 @@ class UserResource extends JsonResource
             'is_active' => $this->is_active,
             'date_joined' => $this->date_joined->format('Y-m-d H:i:s'),
             'last_login' => $this->last_login?->format('Y-m-d H:i:s'),
-            'created_at' => $this->created_at->format('Y-m-d H:i:s'),
+            // 'created_at' => $this->created_at->format('Y-m-d H:i:s'),
+            'created_at' => $this->created_at instanceof \Carbon\Carbon ? $this->created_at->format('Y-m-d H:i:s') : date('Y-m-d H:i:s', strtotime($this->created_at)),
             'updated_at' => $this->updated_at->format('Y-m-d H:i:s'),
         ];
     }

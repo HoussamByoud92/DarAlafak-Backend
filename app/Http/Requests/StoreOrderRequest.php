@@ -16,7 +16,7 @@ class StoreOrderRequest extends FormRequest
         return [
             'customer_name' => 'required|string|max:255',
             'customer_email' => 'required|email|max:254',
-            'customer_phone' => 'required|string|max:20',
+            'customer_phone' => 'nullable|string|max:20',
             'shipping_address' => 'required|string',
             'shipping_city' => 'required|string|max:100',
             'shipping_postal_code' => 'nullable|string|max:20',

@@ -12,7 +12,7 @@ class SerieResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'slug' => $this->slug,
-            'photo' => $this->photo,
+            'photo' => $this->getFirstMediaUrl('photo') ?: null,
             'description' => $this->description,
             'is_active' => $this->is_active,
             'created_at' => $this->created_at->format('Y-m-d H:i:s'),

@@ -63,6 +63,7 @@ class BookController extends Controller
 
     public function store(StoreBookRequest $request)
     {
+
         $book = Book::create($request->validated());
         
         // Handle relationships

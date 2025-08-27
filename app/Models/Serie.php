@@ -30,7 +30,7 @@ class Serie extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('photo')->singleFile();
+        $this->addMediaCollection('photo')->singleFile()->useDisk('public');;
     }
 
     public function books()

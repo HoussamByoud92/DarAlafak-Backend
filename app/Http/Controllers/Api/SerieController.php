@@ -63,13 +63,15 @@ class SerieController extends Controller
         return new SerieResource($serie);
     }
 
-    public function update(Request $request, Serie $serie)
+    public function update(Request $request, $id)
     {
+        $serie = Serie::findOrFail($id);
+
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'is_active' => 'boolean',
+            'photo' => 'nullable|mimes:jpeg,png,jpg,gif|max:2048',
+            'is_active' => 'nullable|boolean',
         ]);
 
         if ($validator->fails()) {
@@ -80,12 +82,14 @@ class SerieController extends Controller
 
         if ($request->hasFile('photo')) {
             $serie->clearMediaCollection('photo');
-            $serie->addMediaFromRequest('photo')
-                ->toMediaCollection('photo');
+            $serie->addMediaFromRequest('photo')->toMediaCollection('photo');
         }
 
-        return new SerieResource($serie);
+        return new SerieResource($serie->fresh());
     }
+
+
+
 
     public function destroy(Serie $serie)
     {

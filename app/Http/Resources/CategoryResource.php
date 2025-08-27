@@ -12,7 +12,7 @@ class CategoryResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'slug' => $this->slug,
-            'logo' => $this->logo,
+            'logo' => $this->getFirstMediaUrl('logo') ?: null,
             'description' => $this->description,
             'is_active' => $this->is_active,
             'sort_order' => $this->sort_order,

@@ -120,4 +120,34 @@ class AuthController extends Controller
         // Add password reset logic here
         return response()->json(['message' => 'Password reset successfully']);
     }
+
+    // AuthController.php (add this method)
+public function updateProfile(Request $request)
+{
+    $validator = Validator::make($request->all(), [
+        'first_name' => 'nullable|string|max:255',
+        'last_name' => 'nullable|string|max:255',
+        'phone' => 'nullable|string|max:255',
+        'address' => 'nullable|string|max:255',
+        'city' => 'nullable|string|max:255',
+        'postal_code' => 'nullable|string|max:255',
+        'country' => 'nullable|string|max:255',
+    ]);
+
+    if ($validator->fails()) {
+        return response()->json(['errors' => $validator->errors()], 422);
+    }
+
+    $user = auth()->user();
+    $user->update($request->only([
+        'first_name', 'last_name', 'phone', 'address', 'city', 'postal_code', 'country'
+    ]));
+
+    return response()->json([
+        'data' => [
+            'user' => $user,
+            'message' => 'Profile updated successfully',
+        ]
+    ]);
+}
 }

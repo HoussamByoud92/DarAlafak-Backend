@@ -94,8 +94,9 @@ Route::post('/newsletter/unsubscribe', [ContactController::class, 'unsubscribe']
 // Public catalogues
 Route::get('/catalogues', [CatalogueController::class, 'index']);
 Route::get('/catalogues/popular', [CatalogueController::class, 'popular']);
-Route::get('/catalogues/{slug}', [CatalogueController::class, 'show']);
 Route::get('/catalogues/{catalogue}/download', [CatalogueController::class, 'download']);
+Route::get('/catalogues/{slug}', [CatalogueController::class, 'show']);
+
 
 // Orders (public - for guest checkout)
 Route::post('/orders', [OrderController::class, 'store']);
@@ -105,6 +106,10 @@ Route::middleware('auth:sanctum')->group(function () {
     // Auth user
     Route::get('/user', [AuthController::class, 'user']);
     Route::post('/logout', [AuthController::class, 'logout']);
+
+    // User profile routes
+    Route::get('/user/orders', [OrderController::class, 'userOrders']);
+    Route::put('/user/profile', [AuthController::class, 'updateProfile']);
     
     // User orders
     Route::get('/orders', [OrderController::class, 'index']);
@@ -166,6 +171,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('admin/catalogues/statistics', [CatalogueController::class, 'statistics']);
         
         // Contact messages
+        Route::get('admin/export/messages', [ContactController::class, 'export']); 
         Route::get('admin/messages', [ContactController::class, 'index']);
         Route::get('admin/messages/{message}', [ContactController::class, 'show']);
         Route::put('admin/messages/{message}', [ContactController::class, 'update']);

@@ -68,32 +68,40 @@ class PublisherController extends Controller
     }
 
     public function update(Request $request, Publisher $publisher)
-    {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'website' => 'nullable|url|max:500',
-            'email' => 'nullable|email|max:254',
-            'phone' => 'nullable|string|max:20',
-            'address' => 'nullable|string',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'is_active' => 'boolean',
-        ]);
+{
+    // Make all fields optional for partial update
+    $validator = Validator::make($request->all(), [
+        'name'        => 'sometimes|required|string|max:255',
+        'description' => 'nullable|string',
+        'website'     => 'nullable|url|max:500',
+        'email'       => 'nullable|email|max:254',
+        'phone'       => 'nullable|string|max:20',
+        'address'     => 'nullable|string',
+        'logo'        => 'nullable', // don't validate as image unless file is uploaded
+        'is_active'   => 'boolean',
+    ]);
 
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
-        }
-
-        $publisher->update($request->except('logo'));
-
-        if ($request->hasFile('logo')) {
-            $publisher->clearMediaCollection('logo');
-            $publisher->addMediaFromRequest('logo')
-                ->toMediaCollection('logo');
-        }
-
-        return new PublisherResource($publisher);
+    if ($validator->fails()) {
+        return response()->json(['errors' => $validator->errors()], 422);
     }
+
+    // Only update fields that were sent in request
+    $publisher->fill($validator->validated())->save();
+    if ($request->hasFile('logo')) {
+    $validator->sometimes('logo', 'image|mimes:jpeg,png,jpg,gif|max:2048', function () {
+        return true;
+    });
+}
+
+    // If logo is a file upload
+    if ($request->hasFile('logo')) {
+        $publisher->clearMediaCollection('logo');
+        $publisher->addMediaFromRequest('logo')
+                  ->toMediaCollection('logo');
+    }
+
+    return new PublisherResource($publisher);
+}
 
     public function destroy(Publisher $publisher)
     {

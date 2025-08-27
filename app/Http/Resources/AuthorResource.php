@@ -12,7 +12,7 @@ class AuthorResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'slug' => $this->slug,
-            'photo' => $this->photo,
+            'photo' => $this->getFirstMediaUrl('photo') ?: null,
             'description' => $this->description,
             'biography' => $this->biography,
             'birth_date' => $this->birth_date?->format('Y-m-d'),

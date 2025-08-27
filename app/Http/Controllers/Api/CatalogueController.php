@@ -44,25 +44,28 @@ class CatalogueController extends Controller
     }
 
     public function download(Catalogue $catalogue)
-    {
-        if (!$catalogue->is_active) {
-            return response()->json(['error' => 'Catalogue not available'], 404);
-        }
-
-        if (!Storage::exists($catalogue->file_path)) {
-            return response()->json(['error' => 'File not found'], 404);
-        }
-
-        // Increment download count
-        $catalogue->increment('download_count');
-
-        $filePath = Storage::path($catalogue->file_path);
-        $fileName = $catalogue->name . '.' . pathinfo($catalogue->file_path, PATHINFO_EXTENSION);
-
-        return response()->download($filePath, $fileName, [
-            'Content-Type' => Storage::mimeType($catalogue->file_path),
-        ]);
+{
+    if (!$catalogue->is_active) {
+        return response()->json(['error' => 'Catalogue not available'], 404);
     }
+
+    $disk = Storage::disk('public'); // <- specify correct disk
+
+    if (!$disk->exists($catalogue->file_path)) {
+        return response()->json(['error' => 'File not found'], 404);
+    }
+
+    // Increment download count
+    $catalogue->increment('download_count');
+
+    $filePath = $disk->path($catalogue->file_path);
+    $fileName = $catalogue->name . '.' . pathinfo($catalogue->file_path, PATHINFO_EXTENSION);
+
+    return response()->download($filePath, $fileName, [
+        'Content-Type' => $disk->mimeType($catalogue->file_path),
+    ]);
+}
+
 
     public function store(Request $request)
     {

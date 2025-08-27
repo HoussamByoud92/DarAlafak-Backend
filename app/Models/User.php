@@ -28,6 +28,9 @@ class User extends Authenticatable
         'is_superuser' => 'boolean',
         'is_staff' => 'boolean',
         'is_active' => 'boolean',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'date_joined' => 'datetime',
     ];
 
     // Relationships

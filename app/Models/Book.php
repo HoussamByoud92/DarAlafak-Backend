@@ -36,6 +36,9 @@ class Book extends Model implements HasMedia
         'is_featured' => 'boolean',
     ];
 
+
+    protected $appends = ['final_price'];
+
     // Slug configuration
     public function getSlugOptions(): SlugOptions
     {
@@ -128,7 +131,7 @@ class Book extends Model implements HasMedia
     // Accessors
     public function getFinalPriceAttribute()
     {
-        return $this->discount_price ?? $this->price;
+        return ($this->price)-($this->discount_price) ?? $this->price;
     }
 
     public function getDiscountPercentageAttribute()

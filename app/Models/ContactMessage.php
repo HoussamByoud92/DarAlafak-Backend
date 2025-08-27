@@ -11,13 +11,18 @@ class ContactMessage extends Model
 
     protected $fillable = [
         'first_name', 'last_name', 'email', 'phone', 'subject',
-        'message', 'is_read', 'replied_at', 'replied_by', 'reply_message'
+        'message', 'is_read', 'replied_at', 'replied_by', 'reply_message',
+        'type' // Add this field
     ];
 
     protected $casts = [
         'is_read' => 'boolean',
         'replied_at' => 'datetime',
     ];
+
+    // Constants for message types
+    const TYPE_CONTACT = 'contact';
+    const TYPE_NEWSLETTER = 'newsletter';
 
     // Relationships
     public function repliedBy()
@@ -29,5 +34,10 @@ class ContactMessage extends Model
     public function scopeUnread($query)
     {
         return $query->where('is_read', false);
+    }
+
+    public function scopeOfType($query, $type)
+    {
+        return $query->where('type', $type);
     }
 }

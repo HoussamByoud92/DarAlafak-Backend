@@ -11,6 +11,7 @@ use App\Services\OrderService;
 use App\Services\WhatsAppService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
@@ -26,14 +27,25 @@ class OrderController extends Controller
     public function store(StoreOrderRequest $request)
     {
         try {
+            DB::beginTransaction();
+            
             $order = $this->orderService->createOrder($request->validated());
             
             // Send WhatsApp notification
             $this->whatsappService->sendOrderNotification($order);
             
-            return new OrderResource($order);
-        } catch (\Exception $e) {
+            DB::commit();
+            
             return response()->json([
+                'success' => true,
+                'message' => 'Order created successfully',
+                'data' => new OrderResource($order->load(['items.book', 'user']))
+            ], 201);
+            
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return response()->json([
+                'success' => false,
                 'error' => 'Failed to create order',
                 'message' => $e->getMessage()
             ], 500);
@@ -192,4 +204,17 @@ class OrderController extends Controller
 
         return response()->json(['data' => $stats]);
     }
+
+    // OrderController.php (add this method)
+public function userOrders()
+{
+    $orders = Order::where('user_id', auth()->id())
+        ->with('items.book')
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+    return response()->json([
+        'data' => OrderResource::collection($orders)
+    ]);
+}
 }
