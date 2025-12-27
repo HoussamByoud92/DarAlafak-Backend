@@ -15,6 +15,8 @@ use App\Http\Controllers\Api\{
     CartController,
     ContactController,
     BlogController,
+    BlogCategoryController,
+    BlogTagController,
     CatalogueController,
     WishlistController,
     ReviewController
@@ -75,10 +77,17 @@ Route::get('/keywords/{slug}/books', [KeywordController::class, 'books']);
 
 // Public blog routes
 Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog/categories', [BlogCategoryController::class, 'index']);
+Route::get('/blog/tags', [BlogTagController::class, 'index']);
+Route::get('/blog/tags/popular', [BlogTagController::class, 'popular']);
 Route::get('/blog/featured', [BlogController::class, 'featured']);
 Route::get('/blog/recent', [BlogController::class, 'recent']);
 Route::get('/blog/{slug}', [BlogController::class, 'show']);
 Route::get('/blog/{post}/related', [BlogController::class, 'related']);
+
+// Alias routes for frontend compatibility
+Route::get('/blog-categories', [BlogCategoryController::class, 'index']);
+Route::get('/blog-tags', [BlogTagController::class, 'index']);
 
 // Public reviews routes
 Route::get('/books/{book}/reviews', [ReviewController::class, 'index']);
@@ -110,77 +119,79 @@ Route::middleware('auth:sanctum')->group(function () {
     // User profile routes
     Route::get('/user/orders', [OrderController::class, 'userOrders']);
     Route::put('/user/profile', [AuthController::class, 'updateProfile']);
-    
+
     // User orders
     Route::get('/orders', [OrderController::class, 'index']);
     Route::get('/orders/{order}', [OrderController::class, 'show']);
     Route::put('/orders/{order}/cancel', [OrderController::class, 'cancel']);
-    
+
     // Cart
     Route::get('/cart', [CartController::class, 'index']);
     Route::post('/cart', [CartController::class, 'store']);
     Route::put('/cart/{item}', [CartController::class, 'update']);
     Route::delete('/cart/{item}', [CartController::class, 'destroy']);
     Route::delete('/cart', [CartController::class, 'clear']);
-    
+
     // Wishlist
     Route::get('/wishlist', [WishlistController::class, 'index']);
     Route::post('/wishlist', [WishlistController::class, 'store']);
     Route::delete('/wishlist/{book}', [WishlistController::class, 'destroy']);
     Route::delete('/wishlist', [WishlistController::class, 'clear']);
     Route::get('/wishlist/{book}/check', [WishlistController::class, 'check']);
-    
+
     // Reviews (authenticated)
     Route::put('/reviews/{review}', [ReviewController::class, 'update']);
     Route::delete('/reviews/{review}', [ReviewController::class, 'destroy']);
-    
+
     // Admin routes
     Route::middleware(['role:admin|staff'])->group(function () {
         // Books management
         Route::apiResource('admin/books', BookController::class);
-        
+
         // Categories management
         Route::apiResource('admin/categories', CategoryController::class);
-        
+
         // Authors management
         Route::apiResource('admin/authors', AuthorController::class);
-        
+
         // Publishers management
         Route::apiResource('admin/publishers', PublisherController::class);
-        
+
         // Series management
         Route::apiResource('admin/series', SerieController::class);
-        
+
         // Physical formats management
         Route::apiResource('admin/physical-formats', PhysicalFormatController::class);
-        
+
         // Keywords management
         Route::apiResource('admin/keywords', KeywordController::class);
-        
+
         // Orders management
         Route::get('admin/orders', [OrderController::class, 'index']);
         Route::get('admin/orders/statistics', [OrderController::class, 'statistics']);
         Route::get('admin/orders/{order}', [OrderController::class, 'show']);
         Route::put('admin/orders/{order}/status', [OrderController::class, 'updateStatus']);
-        
+
         // Blog management
         Route::apiResource('admin/blog', BlogController::class);
-        
+        Route::apiResource('admin/blog-categories', BlogCategoryController::class);
+        Route::apiResource('admin/blog-tags', BlogTagController::class);
+
         // Catalogues management
         Route::apiResource('admin/catalogues', CatalogueController::class);
         Route::get('admin/catalogues/statistics', [CatalogueController::class, 'statistics']);
-        
+
         // Contact messages
-        Route::get('admin/export/messages', [ContactController::class, 'export']); 
+        Route::get('admin/export/messages', [ContactController::class, 'export']);
         Route::get('admin/messages', [ContactController::class, 'index']);
         Route::get('admin/messages/{message}', [ContactController::class, 'show']);
         Route::put('admin/messages/{message}', [ContactController::class, 'update']);
         Route::put('admin/messages/{message}/read', [ContactController::class, 'markAsRead']);
         Route::delete('admin/messages/{message}', [ContactController::class, 'destroy']);
-        
+
         // Newsletter subscribers
         Route::get('admin/newsletter/subscribers', [ContactController::class, 'newsletterSubscribers']);
-        
+
         // Reviews management
         Route::get('admin/reviews/pending', [ReviewController::class, 'pending']);
         Route::put('admin/reviews/{review}/approve', [ReviewController::class, 'approve']);

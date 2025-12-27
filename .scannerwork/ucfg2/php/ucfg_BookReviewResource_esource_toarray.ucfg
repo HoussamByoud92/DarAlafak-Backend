@@ -1,0 +1,326 @@
+
+.app\http\resources\bookreviewresource::toarray]
+SC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Resources\BookReviewResource.php	 	("1*Ä
+1 (
+
+ (	
+%1"$Arrayg
+e
+ (
+%2"__id*M
+
+__unknown_file (1*/'
+%app\http\resources\bookreviewresource"
+id‰
+†
+ (	
+%3"__mapSet*"
+
+__unknown_file (
+
+%1*"
+
+__unknown_file (
+id*"
+
+__unknown_file (
+
+%2l
+j
+ ('
+%4"__id*R
+
+__unknown_file (6*4'
+%app\http\resources\bookreviewresource"	
+book_idŽ
+‹
+ (	
+%5"__mapSet*"
+
+__unknown_file (
+
+%1*'
+
+__unknown_file (	
+book_id*"
+
+__unknown_file (
+
+%4l
+j
+ ('
+%6"__id*R
+
+__unknown_file (6*4'
+%app\http\resources\bookreviewresource"	
+user_idŽ
+‹
+ (	
+%7"__mapSet*"
+
+__unknown_file (
+
+%1*'
+
+__unknown_file (	
+user_id*"
+
+__unknown_file (
+
+%6r
+p
+ (3
+%8"__id*X
+
+__unknown_file (<*:'
+%app\http\resources\bookreviewresource"
+reviewer_name”
+‘
+ (	
+%9"__mapSet*"
+
+__unknown_file (
+
+%1*-
+
+__unknown_file (
+reviewer_name*"
+
+__unknown_file (
+
+%8t
+r
+  (5
+%10"__id*Y
+
+__unknown_file (=*;'
+%app\http\resources\bookreviewresource"
+reviewer_email—
+”
+ (	
+%11"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+reviewer_email*#
+
+__unknown_file (
+
+%10l
+j
+ (%
+%12"__id*Q
+
+__unknown_file (5*3'
+%app\http\resources\bookreviewresource"
+rating
+Œ
+ (	
+%13"__mapSet*"
+
+__unknown_file (
+
+%1*&
+
+__unknown_file (
+
+rating*#
+
+__unknown_file (
+
+%12k
+i
+ (#
+%14"__id*P
+
+__unknown_file (4*2'
+%app\http\resources\bookreviewresource"
+titleŽ
+‹
+ (	
+%15"__mapSet*"
+
+__unknown_file (
+
+%1*%
+
+__unknown_file (	
+title*#
+
+__unknown_file (
+
+%14m
+k
+ ('
+%16"__id*R
+
+__unknown_file (6*4'
+%app\http\resources\bookreviewresource"	
+comment
+
+ (	
+%17"__mapSet*"
+
+__unknown_file (
+
+%1*'
+
+__unknown_file (	
+comment*#
+
+__unknown_file (
+
+%16q
+o
+ (/
+%18"__id*V
+
+__unknown_file (:*8'
+%app\http\resources\bookreviewresource"
+is_approved”
+‘
+ (	
+%19"__mapSet*"
+
+__unknown_file (
+
+%1*+
+
+__unknown_file (
+is_approved*#
+
+__unknown_file (
+
+%18z
+x
+& (A
+%20"__id*_
+
+__unknown_file (C*A'
+%app\http\resources\bookreviewresource"
+is_verified_purchase
+š
+ (	
+%21"__mapSet*"
+
+__unknown_file (
+
+%1*4
+
+__unknown_file (
+is_verified_purchase*#
+
+__unknown_file (
+
+%20p
+n
+ (-
+%22"__id*U
+
+__unknown_file (9*7'
+%app\http\resources\bookreviewresource"
+
+created_atmk
+ (D
+%23*#
+
+__unknown_file (
+
+%22*+
+
+__unknown_file (
+Y-m-d H:i:s2format“
+
+ (	
+%24"__mapSet*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+created_at*#
+
+__unknown_file (
+
+%23p
+n
+ (-
+%25"__id*U
+
+__unknown_file (9*7'
+%app\http\resources\bookreviewresource"
+
+updated_atmk
+ (D
+%26*#
+
+__unknown_file (
+
+%25*+
+
+__unknown_file (
+Y-m-d H:i:s2format“
+
+ (	
+%27"__mapSet*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+updated_at*#
+
+__unknown_file (
+
+%26Š
+' (@
+%29*E
+
+__unknown_file ()'
+%app\http\resources\bookreviewresource*$
+
+__unknown_file (
+user2
+whenloaded42
+ (A
+%28"app\http\resources\userresourceŒ
+‰
+ (A
+%30",app\http\resources\userresource::__construct*#
+
+__unknown_file (
+
+%28*#
+
+__unknown_file (
+
+%29
+Š
+ (	
+%31"__mapSet*"
+
+__unknown_file (
+
+%1*$
+
+__unknown_file (
+user*#
+
+__unknown_file (
+
+%28"
+ (
+
+
+%1:
+	 	($
+
+$requestB)'
+%app\http\resources\bookreviewresourceH

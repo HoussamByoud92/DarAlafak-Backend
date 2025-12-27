@@ -1,0 +1,231 @@
+
+0app\http\controllers\api\authorcontroller::indexa
+WC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\AuthorController.php ("1*ð
+2 (IN
+L
+1 (A
+%4"__id*4
+
+__unknown_file (*
+
+
+$request"
+searchV
+T
++ (G
+%5"__concat*
++ (.
+%*
+1 (A
+
+%4*
+D (G
+%³°
+ (H
+%6*&
+
+__unknown_file (
+
+
+$query*$
+
+__unknown_file (
+name*%
+
+__unknown_file (	
+ILIKE*"
+
+__unknown_file (
+
+%52where*
+3*…
+3 ((nl
+ ((
+%7*(
+
+__unknown_file (
+
+
+$request*+
+
+__unknown_file (
+nationality2has*
+4
+5*ý
+4 (@S
+Q
+) (>
+%8"__id*9
+
+__unknown_file (*
+
+
+$request"
+nationality“
+ (?
+%9*&
+
+__unknown_file (
+
+
+$query*+
+
+__unknown_file (
+nationality*"
+
+__unknown_file (
+
+%82where*
+5*ì
+5 (3’
+ (2
+%10*(
+
+__unknown_file (
+
+
+$request*'
+
+__unknown_file (	
+sort_by*$
+
+__unknown_file (
+name2getB
+@
+ (2	
+$sortBy"__id*#
+
+__unknown_file (
+
+%10”‘
+ (7
+%11*(
+
+__unknown_file (
+
+
+$request**
+
+__unknown_file (
+
+sort_order*#
+
+__unknown_file (
+asc2getE
+C
+ (7
+
+$sortOrder"__id*#
+
+__unknown_file (
+
+%11š—
+ (,
+%12*&
+
+__unknown_file (
+
+
+$query*'
+
+__unknown_file (
+	
+$sortBy**
+
+__unknown_file (
+
+
+$sortOrder2orderbyŒ
+ $  (A
+%13*(
+
+__unknown_file (
+
+
+$request*(
+
+__unknown_file (
+
+per_page* 
+
+__unknown_file (22getjh
+   (B
+%14*&
+
+__unknown_file (
+
+
+$query*#
+
+__unknown_file (
+
+%132paginateC
+A
+   (B
+
+$authors"__id*#
+
+__unknown_file (
+
+%14°
+­
+" "(3
+%15"-app\http\resources\authorresource::collection*A
+
+__unknown_file (%"#
+!app\http\resources\authorresource*(
+
+__unknown_file (
+
+
+$authors"
+" "(4
+
+%15*è
+1 (" 
+
+ (
+%1"__entrypoint¼¹
+ (#
+$requestilluminate\http\request".illuminate\http\request::__sonar_inject_symbol*A
+
+__unknown_file (%
+#
+$requestilluminate\http\request2__sonar_inject_symbola
+_
+ (
+
+$request"__id*A
+
+__unknown_file (%
+#
+$requestilluminate\http\request`
+^
+ (!
+%2"app\models\author::active*1
+
+__unknown_file ("
+app\models\author@
+>
+ (!
+$query"__id*"
+
+__unknown_file (
+
+%2ig
+ (#
+%3*(
+
+__unknown_file (
+
+
+$request*&
+
+__unknown_file (
+
+search2has*
+2
+3:/
+ (*#
+$requestilluminate\http\requestB-+
+)app\http\controllers\api\authorcontrollerH

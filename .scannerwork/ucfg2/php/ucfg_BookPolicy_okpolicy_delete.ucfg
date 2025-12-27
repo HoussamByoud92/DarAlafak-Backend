@@ -1,0 +1,35 @@
+
+app\policies\bookpolicy::deleteO
+EC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Policies\BookPolicy.phpB B("1*¶
+1D D('S
+Q
+B B(
+$user"__id*6
+
+__unknown_file (
+
+$userapp\models\userS
+Q
+B B(
+$book"__id*6
+
+__unknown_file (
+
+$bookapp\models\bookig
+D D(&
+%1*%
+
+__unknown_file (	
+
+$user*%
+
+__unknown_file (	
+admin2hasrole"
+D D('
+
+%1:$
+B B(%
+$userapp\models\user:$
+B' B(1
+$bookapp\models\bookB
+app\policies\bookpolicyH

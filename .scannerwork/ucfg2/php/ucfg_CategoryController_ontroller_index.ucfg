@@ -1,0 +1,47 @@
+
+2app\http\controllers\api\categorycontroller::indexc
+YC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\CategoryController.php ("1*±
+1 (Gd
+b
+ ((
+%1"app\models\category::active*3
+
+__unknown_file ("
+app\models\categoryki
+ (?
+%2*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+sort_order2orderby;9
+ (F
+%3*"
+
+__unknown_file (
+
+%22getE
+C
+ (F
+$categories"__id*"
+
+__unknown_file (
+
+%3¶
+³
+ (8
+%4"/app\http\resources\categoryresource::collection*C
+
+__unknown_file ('"%
+#app\http\resources\categoryresource*+
+
+__unknown_file (
+
+$categories"
+ (9
+
+%4B/-
++app\http\controllers\api\categorycontrollerH

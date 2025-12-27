@@ -1,0 +1,25 @@
+
+ app\policies\bookpolicy::restoreO
+EC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Policies\BookPolicy.phpN N("1*Î
+1P P(S
+Q
+N N(
+$user"__id*6
+
+__unknown_file (
+
+$userapp\models\userS
+Q
+N N(
+$book"__id*6
+
+__unknown_file (
+
+$bookapp\models\book"
+P P(	
+false:$
+N N(&
+$userapp\models\user:$
+N( N(2
+$bookapp\models\bookB
+app\policies\bookpolicyH

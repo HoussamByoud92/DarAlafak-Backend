@@ -1,0 +1,81 @@
+
+/app\http\controllers\api\authorcontroller::showa
+WC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\AuthorController.php% %("1*Ë
+1' +(≠
+™
+' '(.
+%1"app\models\author::where*1
+
+__unknown_file ("
+app\models\author*$
+
+__unknown_file (
+slug*%
+
+__unknown_file (	
+
+$slug
+( *(
+%2"$Arrayµ
+≤
+( *(
+%3"__declareFunction*å
+
+__unknown_file (pn
+l__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\AuthorController.php_40_31å
+â
+( *(
+%4"__mapSet*"
+
+__unknown_file (
+
+%2*%
+
+__unknown_file (	
+books*"
+
+__unknown_file (
+
+%3`^
+' *(
+%5*"
+
+__unknown_file (
+
+%1*"
+
+__unknown_file (
+
+%22withCA
+' +(
+%6*"
+
+__unknown_file (
+
+%52firstorfailA
+?
+' +(	
+$author"__id*"
+
+__unknown_file (
+
+%653
+- -(*
+%7"!app\http\resources\authorresourceê
+ç
+- -(*
+%8".app\http\resources\authorresource::__construct*"
+
+__unknown_file (
+
+%7*'
+
+__unknown_file (
+	
+$author"
+- -(+
+
+%7:
+% %(
+$slugB-+
+)app\http\controllers\api\authorcontrollerH

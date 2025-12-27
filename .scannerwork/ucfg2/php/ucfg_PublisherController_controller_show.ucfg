@@ -1,0 +1,83 @@
+
+2app\http\controllers\api\publishercontroller::showd
+ZC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\PublisherController.php   ("1*˝
+1" &(≥
+∞
+" "(4
+%1"app\models\publisher::where*4
+
+__unknown_file ("
+app\models\publisher*$
+
+__unknown_file (
+slug*%
+
+__unknown_file (	
+
+$slug
+# %(
+%2"$Array∏
+µ
+# %(
+%3"__declareFunction*è
+
+__unknown_file (sq
+o__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\PublisherController.php_35_31å
+â
+# %(
+%4"__mapSet*"
+
+__unknown_file (
+
+%2*%
+
+__unknown_file (	
+books*"
+
+__unknown_file (
+
+%3`^
+" %(
+%5*"
+
+__unknown_file (
+
+%1*"
+
+__unknown_file (
+
+%22withCA
+" &(
+%6*"
+
+__unknown_file (
+
+%52firstorfailD
+B
+" &(
+
+$publisher"__id*"
+
+__unknown_file (
+
+%686
+( ((0
+%7"$app\http\resources\publisherresourceñ
+ì
+( ((0
+%8"1app\http\resources\publisherresource::__construct*"
+
+__unknown_file (
+
+%7**
+
+__unknown_file (
+
+
+$publisher"
+( ((1
+
+%7:
+   (
+$slugB0.
+,app\http\controllers\api\publishercontrollerH

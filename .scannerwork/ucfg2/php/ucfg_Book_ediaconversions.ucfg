@@ -1,0 +1,86 @@
+
+)app\models\book::registermediaconversionsG
+=C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Models\Book.php: :(,"1*0
+2
+
+Book.php"
+E E(
+implicit return*ﬁ
+1< ?(w
+u
+: :(,
+$media"__id*Y
+
+__unknown_file (=
+;
+$media1spatie\medialibrary\mediacollections\models\media~|
+< <(*
+%1*/
+
+__unknown_file (
+app\models\book*%
+
+__unknown_file (	
+thumb2addmediaconversion`^
+< =(
+%2*"
+
+__unknown_file (
+
+%1*!
+
+__unknown_file (2¨2widtha_
+< >(
+%3*"
+
+__unknown_file (
+
+%2*!
+
+__unknown_file (2ê2heighta_
+< ?(
+%4*"
+
+__unknown_file (
+
+%3* 
+
+__unknown_file (2
+2sharpenÄ~
+A A(,
+%5*/
+
+__unknown_file (
+app\models\book*'
+
+__unknown_file (	
+preview2addmediaconversion`^
+A B(
+%6*"
+
+__unknown_file (
+
+%5*!
+
+__unknown_file (2ÿ2widtha_
+A C(
+%7*"
+
+__unknown_file (
+
+%6*!
+
+__unknown_file (2†2heighta_
+A D(
+%8*"
+
+__unknown_file (
+
+%7* 
+
+__unknown_file (2
+2sharpen*
+2:G
+:- :(@;
+$media1spatie\medialibrary\mediacollections\models\mediaB
+app\models\bookH

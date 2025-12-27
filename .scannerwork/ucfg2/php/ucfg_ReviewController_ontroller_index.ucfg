@@ -1,0 +1,184 @@
+
+0app\http\controllers\api\reviewcontroller::indexa
+WC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\ReviewController.php ("1*«
+1 (* 
+
+ (
+%1"__entrypoint¼¹
+ (#
+$requestilluminate\http\request".illuminate\http\request::__sonar_inject_symbol*A
+
+__unknown_file (%
+#
+$requestilluminate\http\request2__sonar_inject_symbola
+_
+ (
+
+$request"__id*A
+
+__unknown_file (%
+#
+$requestilluminate\http\requestŠ
+‡
+ ()
+%2"app\models\book::findorfail*/
+
+__unknown_file ("
+app\models\book*'
+
+__unknown_file (
+	
+$bookId?
+=
+ ()
+$book"__id*"
+
+__unknown_file (
+
+%2º
+·
+ (6
+%3"app\models\bookreview::where*5
+
+__unknown_file ("
+app\models\bookreview*'
+
+__unknown_file (	
+book_id*'
+
+__unknown_file (
+	
+$bookId@>
+ (B
+%4*"
+
+__unknown_file (
+
+%32approvedb`
+ (P
+%5*"
+
+__unknown_file (
+
+%4*$
+
+__unknown_file (
+user2with@
+>
+ (P
+$query"__id*"
+
+__unknown_file (
+
+%5—”
+ (8
+%6*(
+
+__unknown_file (
+
+
+$request*'
+
+__unknown_file (	
+sort_by**
+
+__unknown_file (
+
+created_at2getA
+?
+ (8	
+$sortBy"__id*"
+
+__unknown_file (
+
+%6”‘
+ (8
+%7*(
+
+__unknown_file (
+
+
+$request**
+
+__unknown_file (
+
+sort_order*$
+
+__unknown_file (
+desc2getD
+B
+ (8
+
+$sortOrder"__id*"
+
+__unknown_file (
+
+%7™–
+ (,
+%8*&
+
+__unknown_file (
+
+
+$query*'
+
+__unknown_file (
+	
+$sortBy**
+
+__unknown_file (
+
+
+$sortOrder2orderbyŽ‹
+$ (A
+%9*(
+
+__unknown_file (
+
+
+$request*(
+
+__unknown_file (
+
+per_page* 
+
+__unknown_file (2
+2getig
+ (B
+%10*&
+
+__unknown_file (
+
+
+$query*"
+
+__unknown_file (
+
+%92paginateC
+A
+ (B
+
+$reviews"__id*#
+
+__unknown_file (
+
+%10¸
+µ
+ (7
+%11"1app\http\resources\bookreviewresource::collection*E
+
+__unknown_file ()"'
+%app\http\resources\bookreviewresource*(
+
+__unknown_file (
+
+
+$reviews"
+ (8
+
+%11:/
+ (*#
+$requestilluminate\http\request:
+, (3	
+$bookIdB-+
+)app\http\controllers\api\reviewcontrollerH

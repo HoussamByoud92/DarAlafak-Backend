@@ -1,0 +1,39 @@
+
+$app\models\publisher::getslugoptionsL
+BC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Models\Publisher.php (""1*ï
+1 ("v
+t
+ ($
+%1"$spatie\sluggable\slugoptions::create*<
+
+__unknown_file ( "
+spatie\sluggable\slugoptionsom
+ ('
+%2*"
+
+__unknown_file (
+
+%1*$
+
+__unknown_file (
+name2generateslugsfromig
+ (!
+%3*"
+
+__unknown_file (
+
+%2*$
+
+__unknown_file (
+slug2saveslugstoZ
+X
+ (""
+%4spatie\sluggable\slugoptions"__id*"
+
+__unknown_file (
+
+%3"0
+ ("$
+"
+%4spatie\sluggable\slugoptionsB
+app\models\publisherH

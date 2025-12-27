@@ -1,0 +1,62 @@
+
+l__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\OrderController.php_214_27b
+VC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\OrderController.phpÖ Ö(#"1*=
+2
+OrderController.php"!
+
+Ù Ù(	
+implicit return*Ú
+1
+× Ø(<I
+G
+
+×% ×(.
+%1"__id*-
+
+__unknown_file (*
+
+$user"
+id‘Ž
+
+× ×(/
+%2*&
+
+__unknown_file (
+
+
+$query*'
+
+__unknown_file (	
+user_id*"
+
+__unknown_file (
+
+%12whereL
+J
+
+Ø. Ø(:
+%3"__id*0
+
+__unknown_file (*
+
+$user"
+email–“
+
+× Ø(;
+%4*"
+
+__unknown_file (
+
+%2*.
+
+__unknown_file (
+customer_email*"
+
+__unknown_file (
+
+%32orwhere*
+2:
+
+Ö$ Ö(*
+$queryB,*
+(app\http\controllers\api\ordercontrollerH

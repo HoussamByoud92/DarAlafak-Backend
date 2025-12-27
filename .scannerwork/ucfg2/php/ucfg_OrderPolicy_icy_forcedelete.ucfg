@@ -1,0 +1,25 @@
+
+%app\policies\orderpolicy::forcedeleteP
+FC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Policies\OrderPolicy.phpZ Z("1*Ñ
+1\ \(S
+Q
+Z Z(
+$user"__id*6
+
+__unknown_file (
+
+$userapp\models\userV
+T
+Z Z(
+$order"__id*8
+
+__unknown_file (
+
+$orderapp\models\order"
+\ \(	
+false:$
+Z  Z(*
+$userapp\models\user:&
+Z, Z(8
+$orderapp\models\orderB
+app\policies\orderpolicyH

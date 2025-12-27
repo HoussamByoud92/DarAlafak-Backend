@@ -1,0 +1,49 @@
+
+1app\http\controllers\api\categorycontroller::showc
+YC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\CategoryController.php ("1*¯
+1 (B±
+®
+ (2
+%1"app\models\category::where*3
+
+__unknown_file ("
+app\models\category*$
+
+__unknown_file (
+slug*%
+
+__unknown_file (	
+
+$slugCA
+ (A
+%2*"
+
+__unknown_file (
+
+%12firstorfailC
+A
+ (A
+	$category"__id*"
+
+__unknown_file (
+
+%275
+ (.
+%3"#app\http\resources\categoryresource”
+‘
+ (.
+%4"0app\http\resources\categoryresource::__construct*"
+
+__unknown_file (
+
+%3*)
+
+__unknown_file (
+
+	$category"
+ (/
+
+%3:
+ (
+$slugB/-
++app\http\controllers\api\categorycontrollerH

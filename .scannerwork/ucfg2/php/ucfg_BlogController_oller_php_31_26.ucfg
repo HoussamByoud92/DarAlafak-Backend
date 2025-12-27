@@ -1,0 +1,90 @@
+
+j__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\BlogController.php_31_26_
+UC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\BlogController.php (""1*:
+2
+BlogController.php"
+# #(
+implicit return*Ê
+1  "(E[
+Y
+ ,  (?
+%1"__concat*
+ ,  (/
+%*
+ 2  (9
+	
+$search*
+ <  (?
+%°­
+   (@
+%2*"
+
+__unknown_file (
+
+$q*%
+
+__unknown_file (	
+title*%
+
+__unknown_file (	
+ILIKE*"
+
+__unknown_file (
+
+%12where[
+Y
+!0 !(C
+%3"__concat*
+!0 !(3
+%*
+!6 !(=
+	
+$search*
+!@ !(C
+%´±
+  !(D
+%4*"
+
+__unknown_file (
+
+%2*'
+
+__unknown_file (	
+content*%
+
+__unknown_file (	
+ILIKE*"
+
+__unknown_file (
+
+%32orwhere[
+Y
+"0 "(C
+%5"__concat*
+"0 "(3
+%*
+"6 "(=
+	
+$search*
+"@ "(C
+%´±
+  "(D
+%6*"
+
+__unknown_file (
+
+%4*'
+
+__unknown_file (	
+excerpt*%
+
+__unknown_file (	
+ILIKE*"
+
+__unknown_file (
+
+%52orwhere*
+2:
+# (%
+$qB+)
+'app\http\controllers\api\blogcontrollerH

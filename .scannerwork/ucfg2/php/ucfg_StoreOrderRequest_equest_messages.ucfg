@@ -1,0 +1,90 @@
+
+-app\http\requests\storeorderrequest::messages[
+QC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Requests\StoreOrderRequest.php! !("1*�	
+1# *(
+
+# *(	
+%1"$Array�
+�
+# *(	
+%2"__mapSet*"
+
+__unknown_file (
+
+%1*6
+
+__unknown_file (
+customer_name.required*>
+
+__unknown_file (" 
+اسم العميل مطلوب�
+�
+# *(	
+%3"__mapSet*"
+
+__unknown_file (
+
+%1*7
+
+__unknown_file (
+customer_email.required*L
+
+__unknown_file (0.
+,البريد الإلكتروني مطلوب�
+�
+# *(	
+%4"__mapSet*"
+
+__unknown_file (
+
+%1*7
+
+__unknown_file (
+customer_phone.required*>
+
+__unknown_file (" 
+رقم الهاتف مطلوب�
+�
+# *(	
+%5"__mapSet*"
+
+__unknown_file (
+
+%1*9
+
+__unknown_file (
+shipping_address.required*@
+
+__unknown_file ($"
+ عنوان الشحن مطلوب�
+�
+# *(	
+%6"__mapSet*"
+
+__unknown_file (
+
+%1*6
+
+__unknown_file (
+shipping_city.required*B
+
+__unknown_file (&$
+"مدينة الشحن مطلوبة�
+�
+# *(	
+%7"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+items.required*U
+
+__unknown_file (97
+5يجب إضافة كتاب واحد على الأقل"
+# *(
+
+
+%1B'%
+#app\http\requests\storeorderrequestH

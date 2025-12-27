@@ -1,0 +1,142 @@
+
++app\http\resources\keywordresource::toarrayZ
+PC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Resources\KeywordResource.php	 	("1*ˇ
+1 (
+
+ (	
+%1"$Arrayd
+b
+ (
+%2"__id*J
+
+__unknown_file (.*,$
+"app\http\resources\keywordresource"
+idâ
+Ü
+ (	
+%3"__mapSet*"
+
+__unknown_file (
+
+%1*"
+
+__unknown_file (
+id*"
+
+__unknown_file (
+
+%2f
+d
+ (!
+%4"__id*L
+
+__unknown_file (0*.$
+"app\http\resources\keywordresource"
+nameã
+à
+ (	
+%5"__mapSet*"
+
+__unknown_file (
+
+%1*$
+
+__unknown_file (
+name*"
+
+__unknown_file (
+
+%4f
+d
+ (!
+%6"__id*L
+
+__unknown_file (0*.$
+"app\http\resources\keywordresource"
+slugã
+à
+ (	
+%7"__mapSet*"
+
+__unknown_file (
+
+%1*$
+
+__unknown_file (
+slug*"
+
+__unknown_file (
+
+%6l
+j
+ (-
+%8"__id*R
+
+__unknown_file (6*4$
+"app\http\resources\keywordresource"
+
+created_atki
+ (D
+%9*"
+
+__unknown_file (
+
+%8*+
+
+__unknown_file (
+Y-m-d H:i:s2formatí
+è
+ (	
+%10"__mapSet*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+created_at*"
+
+__unknown_file (
+
+%9m
+k
+ (-
+%11"__id*R
+
+__unknown_file (6*4$
+"app\http\resources\keywordresource"
+
+updated_atmk
+ (D
+%12*#
+
+__unknown_file (
+
+%11*+
+
+__unknown_file (
+Y-m-d H:i:s2formatì
+ê
+ (	
+%13"__mapSet*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+updated_at*#
+
+__unknown_file (
+
+%12"
+ (
+
+
+%1:
+	 	($
+
+$requestB&$
+"app\http\resources\keywordresourceH

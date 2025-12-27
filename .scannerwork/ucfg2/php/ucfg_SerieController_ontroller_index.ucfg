@@ -1,0 +1,191 @@
+
+/app\http\controllers\api\seriecontroller::index`
+VC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\SerieController.php ("1*ð
+2 (IN
+L
+1 (A
+%4"__id*4
+
+__unknown_file (*
+
+
+$request"
+searchV
+T
++ (G
+%5"__concat*
++ (.
+%*
+1 (A
+
+%4*
+D (G
+%³°
+ (H
+%6*&
+
+__unknown_file (
+
+
+$query*$
+
+__unknown_file (
+name*%
+
+__unknown_file (	
+ILIKE*"
+
+__unknown_file (
+
+%52where*
+3*ã
+3 (3‘Ž
+ (2
+%7*(
+
+__unknown_file (
+
+
+$request*'
+
+__unknown_file (	
+sort_by*$
+
+__unknown_file (
+name2getA
+?
+ (2	
+$sortBy"__id*"
+
+__unknown_file (
+
+%7“
+ (7
+%8*(
+
+__unknown_file (
+
+
+$request**
+
+__unknown_file (
+
+sort_order*#
+
+__unknown_file (
+asc2getD
+B
+ (7
+
+$sortOrder"__id*"
+
+__unknown_file (
+
+%8™–
+ (,
+%9*&
+
+__unknown_file (
+
+
+$query*'
+
+__unknown_file (
+	
+$sortBy**
+
+__unknown_file (
+
+
+$sortOrder2orderbyŒ
+# (@
+%10*(
+
+__unknown_file (
+
+
+$request*(
+
+__unknown_file (
+
+per_page* 
+
+__unknown_file (22getjh
+ (A
+%11*&
+
+__unknown_file (
+
+
+$query*#
+
+__unknown_file (
+
+%102paginateB
+@
+ (A	
+$series"__id*#
+
+__unknown_file (
+
+%11­
+ª
+ (1
+%12",app\http\resources\serieresource::collection*@
+
+__unknown_file ($""
+ app\http\resources\serieresource*'
+
+__unknown_file (
+	
+$series"
+ (2
+
+%12*æ
+1 (! 
+
+ (
+%1"__entrypoint¼¹
+ (#
+$requestilluminate\http\request".illuminate\http\request::__sonar_inject_symbol*A
+
+__unknown_file (%
+#
+$requestilluminate\http\request2__sonar_inject_symbola
+_
+ (
+
+$request"__id*A
+
+__unknown_file (%
+#
+$requestilluminate\http\request^
+\
+ ( 
+%2"app\models\serie::active*0
+
+__unknown_file ("
+app\models\serie@
+>
+ ( 
+$query"__id*"
+
+__unknown_file (
+
+%2ig
+ (#
+%3*(
+
+__unknown_file (
+
+
+$request*&
+
+__unknown_file (
+
+search2has*
+2
+3:/
+ (*#
+$requestilluminate\http\requestB,*
+(app\http\controllers\api\seriecontrollerH

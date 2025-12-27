@@ -208,9 +208,15 @@ class OrderController extends Controller
     // OrderController.php (add this method)
 public function userOrders()
 {
-    $orders = Order::where('user_id', auth()->id())
+    // Get orders where user_id matches OR where customer_email matches the authenticated user's email
+    $user = auth()->user();
+    
+    $orders = Order::where(function($query) use ($user) {
+            $query->where('user_id', $user->id)
+                  ->orWhere('customer_email', $user->email);
+        })
         ->with('items.book')
-        ->orderBy('created_at', 'desc')
+        ->orderBy('status', 'asc')
         ->get();
 
     return response()->json([

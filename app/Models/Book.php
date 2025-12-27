@@ -37,7 +37,7 @@ class Book extends Model implements HasMedia
     ];
 
 
-    protected $appends = ['final_price'];
+    protected $appends = ['final_price', 'front_image_url', 'back_image_url'];
 
     // Slug configuration
     public function getSlugOptions(): SlugOptions
@@ -149,4 +149,47 @@ class Book extends Model implements HasMedia
             ->logOnly(['title', 'price', 'is_published', 'is_available'])
             ->logOnlyDirty();
     }
+
+    // In your Book model (Book.php)
+public function getFrontImageUrlAttribute()
+{
+    if (!$this->front_image) {
+        return null;
+    }
+    
+    // If it's already a URL, return it
+    if (filter_var($this->front_image, FILTER_VALIDATE_URL)) {
+        return $this->front_image;
+    }
+    
+    // If it's a full path, extract just the filename
+    if (str_contains($this->front_image, DIRECTORY_SEPARATOR)) {
+        $filename = basename($this->front_image);
+        return asset('storage/' . $filename);
+    }
+    
+    // Assume it's already a relative path
+    return asset('storage/' . $this->front_image);
+}
+
+public function getBackImageUrlAttribute()
+{
+    if (!$this->back_image) {
+        return null;
+    }
+    
+    // If it's already a URL, return it
+    if (filter_var($this->back_image, FILTER_VALIDATE_URL)) {
+        return $this->back_image;
+    }
+    
+    // If it's a full path, extract just the filename
+    if (str_contains($this->back_image, DIRECTORY_SEPARATOR)) {
+        $filename = basename($this->back_image);
+        return asset('storage/' . $filename);
+    }
+    
+    // Assume it's already a relative path
+    return asset('storage/' . $this->back_image);
+}
 }

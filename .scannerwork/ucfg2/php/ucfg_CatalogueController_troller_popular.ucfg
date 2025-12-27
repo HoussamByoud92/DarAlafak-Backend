@@ -1,0 +1,103 @@
+
+5app\http\controllers\api\cataloguecontroller::popularf
+ZC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\CatalogueController.phpü ü("1*Æ	
+1
+° §("
+ 
+
+ü ü(
+%1"__entrypointæª
+
+ü ü(#
+$requestilluminate\http\request".illuminate\http\request::__sonar_inject_symbol*A
+
+__unknown_file (%
+#
+$requestilluminate\http\request2__sonar_inject_symbolc
+a
+
+ü ü(
+
+$request"__id*A
+
+__unknown_file (%
+#
+$requestilluminate\http\requesth
+f
+
+° °()
+%2"app\models\catalogue::active*4
+
+__unknown_file ("
+app\models\catalogueòï
+
+° ¢(/
+%3*"
+
+__unknown_file (
+
+%2*.
+
+__unknown_file (
+download_count*$
+
+__unknown_file (
+desc2orderbyçä
+
+£ £(-
+%4*(
+
+__unknown_file (
+
+
+$request*%
+
+__unknown_file (	
+limit* 
+
+__unknown_file (22getca
+
+° £(.
+%5*"
+
+__unknown_file (
+
+%3*"
+
+__unknown_file (
+
+%42limit=;
+
+° §(
+%6*"
+
+__unknown_file (
+
+%52getG
+E
+
+° §(
+$catalogues"__id*"
+
+__unknown_file (
+
+%6∫
+∑
+
+¶ ¶(9
+%7"0app\http\resources\catalogueresource::collection*D
+
+__unknown_file (("&
+$app\http\resources\catalogueresource*+
+
+__unknown_file (
+
+$catalogues"
+
+¶ ¶(:
+
+%7:1
+
+ü ü(,#
+$requestilluminate\http\requestB0.
+,app\http\controllers\api\cataloguecontrollerH

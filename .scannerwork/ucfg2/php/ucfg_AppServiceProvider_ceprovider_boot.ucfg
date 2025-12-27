@@ -1,0 +1,18 @@
+
+&app\providers\appserviceprovider::bootX
+NC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Providers\AppServiceProvider.php ("1*>
+2
+AppServiceProvider.php"
+ (
+implicit return*Æ
+1 ()±
+®
+ ((
+%1"6illuminate\support\facades\schema::defaultstringlength*A
+
+__unknown_file (%"#
+!illuminate\support\facades\schema*!
+
+__unknown_file (2¿*
+2B$"
+ app\providers\appserviceproviderH

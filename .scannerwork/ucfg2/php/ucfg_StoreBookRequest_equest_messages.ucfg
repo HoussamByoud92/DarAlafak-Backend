@@ -1,0 +1,77 @@
+
+,app\http\requests\storebookrequest::messagesZ
+PC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Requests\StoreBookRequest.php. .("1*�
+10 6(
+
+0 6(	
+%1"$Array�
+�
+0 6(	
+%2"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+title.required*B
+
+__unknown_file (&$
+"عنوان الكتاب مطلوب�
+�
+0 6(	
+%3"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+price.required*>
+
+__unknown_file (" 
+سعر الكتاب مطلوب�
+�
+0 6(	
+%4"__mapSet*"
+
+__unknown_file (
+
+%1*+
+
+__unknown_file (
+isbn.unique*C
+
+__unknown_file ('%
+#رقم ISBN موجود مسبقاً�
+�
+0 6(	
+%5"__mapSet*"
+
+__unknown_file (
+
+%1*1
+
+__unknown_file (
+front_image.image*n
+
+__unknown_file (RP
+Nيجب أن تكون صورة الغلاف الأمامي من نوع صورة�
+�
+0 6(	
+%6"__mapSet*"
+
+__unknown_file (
+
+%1*0
+
+__unknown_file (
+back_image.image*l
+
+__unknown_file (PN
+Lيجب أن تكون صورة الغلاف الخلفي من نوع صورة"
+0 6(
+
+
+%1B&$
+"app\http\requests\storebookrequestH

@@ -1,0 +1,57 @@
+
+2app\http\controllers\api\cataloguecontroller::showd
+ZC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\CatalogueController.php( (("1*õ
+1* *(N³
+°
+* *(4
+%1"app\models\catalogue::where*4
+
+__unknown_file ("
+app\models\catalogue*$
+
+__unknown_file (
+slug*%
+
+__unknown_file (	
+
+$slug><
+* *(>
+%2*"
+
+__unknown_file (
+
+%12activeCA
+* *(M
+%3*"
+
+__unknown_file (
+
+%22firstorfailD
+B
+* *(M
+
+$catalogue"__id*"
+
+__unknown_file (
+
+%386
++ +(0
+%4"$app\http\resources\catalogueresource–
+“
++ +(0
+%5"1app\http\resources\catalogueresource::__construct*"
+
+__unknown_file (
+
+%4**
+
+__unknown_file (
+
+
+$catalogue"
++ +(1
+
+%4:
+( ((
+$slugB0.
+,app\http\controllers\api\cataloguecontrollerH

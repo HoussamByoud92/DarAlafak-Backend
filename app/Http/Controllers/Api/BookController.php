@@ -55,35 +55,42 @@ class BookController extends Controller
         $book = Book::where('slug', $slug)
             ->with(['category', 'authors', 'publisher', 'serie', 'physicalFormat', 'keywords', 'reviews'])
             ->firstOrFail();
-            
+
         $book->increment('views_count');
-        
+
         return new BookResource($book);
     }
 
     public function store(StoreBookRequest $request)
     {
+        // Exclude file fields from validated data to prevent temp paths being saved
+        $data = collect($request->validated())->except(['front_image', 'back_image'])->toArray();
 
-        $book = Book::create($request->validated());
-        
+        $book = Book::create($data);
+
         // Handle relationships
         if ($request->has('author_ids')) {
             $book->authors()->sync($request->author_ids);
         }
-        
+
         if ($request->has('keyword_ids')) {
             $book->keywords()->sync($request->keyword_ids);
         }
 
-        // Handle file uploads
+        // Handle file uploads properly using Laravel's storage system
         if ($request->hasFile('front_image')) {
-            $book->addMediaFromRequest('front_image')
-                ->toMediaCollection('front_cover');
+            $path = $request->file('front_image')->store('books', 'public');
+            $book->front_image = $path;
         }
 
         if ($request->hasFile('back_image')) {
-            $book->addMediaFromRequest('back_image')
-                ->toMediaCollection('back_cover');
+            $path = $request->file('back_image')->store('books', 'public');
+            $book->back_image = $path;
+        }
+
+        // Save the image paths if any were uploaded
+        if ($request->hasFile('front_image') || $request->hasFile('back_image')) {
+            $book->save();
         }
 
         return new BookResource($book->load(['category', 'authors', 'publisher']));
@@ -91,28 +98,42 @@ class BookController extends Controller
 
     public function update(UpdateBookRequest $request, Book $book)
     {
-        $book->update($request->validated());
-        
+        // Exclude file fields from validated data to prevent temp paths being saved
+        $data = collect($request->validated())->except(['front_image', 'back_image'])->toArray();
+
+        $book->update($data);
+
         // Handle relationships
         if ($request->has('author_ids')) {
             $book->authors()->sync($request->author_ids);
         }
-        
+
         if ($request->has('keyword_ids')) {
             $book->keywords()->sync($request->keyword_ids);
         }
 
-        // Handle file uploads
+        // Handle file uploads properly using Laravel's storage system
         if ($request->hasFile('front_image')) {
-            $book->clearMediaCollection('front_cover');
-            $book->addMediaFromRequest('front_image')
-                ->toMediaCollection('front_cover');
+            // Delete old image if it exists
+            if ($book->front_image && \Storage::disk('public')->exists($book->front_image)) {
+                \Storage::disk('public')->delete($book->front_image);
+            }
+            $path = $request->file('front_image')->store('books', 'public');
+            $book->front_image = $path;
         }
 
         if ($request->hasFile('back_image')) {
-            $book->clearMediaCollection('back_cover');
-            $book->addMediaFromRequest('back_image')
-                ->toMediaCollection('back_cover');
+            // Delete old image if it exists
+            if ($book->back_image && \Storage::disk('public')->exists($book->back_image)) {
+                \Storage::disk('public')->delete($book->back_image);
+            }
+            $path = $request->file('back_image')->store('books', 'public');
+            $book->back_image = $path;
+        }
+
+        // Save the image paths if any were uploaded
+        if ($request->hasFile('front_image') || $request->hasFile('back_image')) {
+            $book->save();
         }
 
         return new BookResource($book->load(['category', 'authors', 'publisher']));

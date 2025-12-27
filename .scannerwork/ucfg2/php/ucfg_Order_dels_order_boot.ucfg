@@ -1,0 +1,34 @@
+
+app\models\order::bootH
+>C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Models\Order.php" "(""1*1
+2
+	Order.php"
+) )(
+implicit return*’
+1$ $(n
+l
+$ $(
+%1"(illuminate\database\eloquent\model::boot*0
+
+__unknown_file (
+app\models\order›
+˜
+& ((	
+%2"__declareFunction*s
+
+__unknown_file (WU
+S__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Models\Order.php_38_25p
+n
+& ((
+
+%3"static::creating*&
+
+__unknown_file (
+"
+static*"
+
+__unknown_file (
+
+%2*
+2B
+app\models\orderH

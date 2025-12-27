@@ -1,0 +1,356 @@
+
+)app\http\requests\storebookrequest::rulesZ
+PC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Requests\StoreBookRequest.php ("1*Ò"
+1 +(
+
+ +(	
+%1"$Array°
+û
+ +(	
+%2"__mapSet*"
+
+__unknown_file (
+
+%1*%
+
+__unknown_file (	
+title*7
+
+__unknown_file (
+required|string|max:500±
+Æ
+ +(	
+%3"__mapSet*"
+
+__unknown_file (
+
+%1*$
+
+__unknown_file (
+isbn*H
+
+__unknown_file (,*
+(nullable|string|max:20|unique:books,isbn†
+ù
+ +(	
+%4"__mapSet*"
+
+__unknown_file (
+
+%1*%
+
+__unknown_file (	
+price*6
+
+__unknown_file (
+required|numeric|min:0≤
+Ø
+ +(	
+%5"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+discount_price*?
+
+__unknown_file (#!
+nullable|numeric|min:0|lt:price†
+ù
+ +(	
+%6"__mapSet*"
+
+__unknown_file (
+
+%1*%
+
+__unknown_file (	
+pages*6
+
+__unknown_file (
+nullable|integer|min:1ü
+ú
+ +(	
+%7"__mapSet*"
+
+__unknown_file (
+
+%1*+
+
+__unknown_file (
+description*/
+
+__unknown_file (
+nullable|stringõ
+ò
+ +(	
+%8"__mapSet*"
+
+__unknown_file (
+
+%1*'
+
+__unknown_file (	
+summary*/
+
+__unknown_file (
+nullable|stringø
+º
+ +(	
+%9"__mapSet*"
+
+__unknown_file (
+
+%1*+
+
+__unknown_file (
+front_image*O
+
+__unknown_file (31
+/nullable|image|mimes:jpeg,png,jpg,gif|max:20480ø
+º
+ +(	
+%10"__mapSet*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+back_image*O
+
+__unknown_file (31
+/nullable|image|mimes:jpeg,png,jpg,gif|max:20480ô
+ñ
+ +(	
+%11"__mapSet*"
+
+__unknown_file (
+
+%1*,
+
+__unknown_file (
+is_published*'
+
+__unknown_file (	
+booleanô
+ñ
+ +(	
+%12"__mapSet*"
+
+__unknown_file (
+
+%1*,
+
+__unknown_file (
+is_available*'
+
+__unknown_file (	
+booleanò
+ï
+ +(	
+%13"__mapSet*"
+
+__unknown_file (
+
+%1*+
+
+__unknown_file (
+is_featured*'
+
+__unknown_file (	
+boolean™
+ß
+ +(	
+%14"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+stock_quantity*6
+
+__unknown_file (
+nullable|integer|min:0¢
+ü
+ +(	
+%15"__mapSet*"
+
+__unknown_file (
+
+%1*&
+
+__unknown_file (
+
+weight*6
+
+__unknown_file (
+nullable|numeric|min:0¶
+£
+ +(	
+%16"__mapSet*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+dimensions*6
+
+__unknown_file (
+nullable|string|max:50§
+°
+ +(	
+%17"__mapSet*"
+
+__unknown_file (
+
+%1*(
+
+__unknown_file (
+
+language*6
+
+__unknown_file (
+nullable|string|max:50£
+†
+ +(	
+%18"__mapSet*"
+
+__unknown_file (
+
+%1*0
+
+__unknown_file (
+publication_date*-
+
+__unknown_file (
+nullable|date£
+†
+ +(	
+%19"__mapSet*"
+
+__unknown_file (
+
+%1*'
+
+__unknown_file (	
+edition*6
+
+__unknown_file (
+nullable|integer|min:1Æ
+´
+ +(	
+%20"__mapSet*"
+
+__unknown_file (
+
+%1*+
+
+__unknown_file (
+category_id*=
+
+__unknown_file (!
+nullable|exists:categories,idª
+∏
+ +(	
+%21"__mapSet*"
+
+__unknown_file (
+
+%1*2
+
+__unknown_file (
+physical_format_id*C
+
+__unknown_file ('%
+#nullable|exists:physical_formats,idØ
+¨
+ +(	
+%22"__mapSet*"
+
+__unknown_file (
+
+%1*,
+
+__unknown_file (
+publisher_id*=
+
+__unknown_file (!
+nullable|exists:publishers,idß
+§
+ +(	
+%23"__mapSet*"
+
+__unknown_file (
+
+%1*(
+
+__unknown_file (
+
+serie_id*9
+
+__unknown_file (
+nullable|exists:series,idû
+õ
+ +(	
+%24"__mapSet*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+author_ids*.
+
+__unknown_file (
+nullable|array£
+†
+ +(	
+%25"__mapSet*"
+
+__unknown_file (
+
+%1*,
+
+__unknown_file (
+author_ids.**1
+
+__unknown_file (
+exists:authors,idü
+ú
+ +(	
+%26"__mapSet*"
+
+__unknown_file (
+
+%1*+
+
+__unknown_file (
+keyword_ids*.
+
+__unknown_file (
+nullable|array•
+¢
+ +(	
+%27"__mapSet*"
+
+__unknown_file (
+
+%1*-
+
+__unknown_file (
+keyword_ids.**2
+
+__unknown_file (
+exists:keywords,id"
+ +(
+
+
+%1B&$
+"app\http\requests\storebookrequestH

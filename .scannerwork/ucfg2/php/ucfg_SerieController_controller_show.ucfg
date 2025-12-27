@@ -1,0 +1,82 @@
+
+.app\http\controllers\api\seriecontroller::show`
+VC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\SerieController.php   ("1*á
+1" &(«
+¨
+" "(,
+%1"app\models\serie::where*0
+
+__unknown_file ("
+app\models\serie*$
+
+__unknown_file (
+slug*%
+
+__unknown_file (	
+
+$slug
+# %(
+%2"$Array´
+±
+# %(
+%3"__declareFunction*‹
+
+__unknown_file (om
+k__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\SerieController.php_35_31Œ
+‰
+# %(
+%4"__mapSet*"
+
+__unknown_file (
+
+%2*%
+
+__unknown_file (	
+books*"
+
+__unknown_file (
+
+%3`^
+" %(
+%5*"
+
+__unknown_file (
+
+%1*"
+
+__unknown_file (
+
+%22withCA
+" &(
+%6*"
+
+__unknown_file (
+
+%52firstorfail@
+>
+" &(
+$serie"__id*"
+
+__unknown_file (
+
+%642
+( (((
+%7" app\http\resources\serieresourceŽ
+‹
+( (((
+%8"-app\http\resources\serieresource::__construct*"
+
+__unknown_file (
+
+%7*&
+
+__unknown_file (
+
+
+$serie"
+( (()
+
+%7:
+   (
+$slugB,*
+(app\http\controllers\api\seriecontrollerH

@@ -1,0 +1,25 @@
+
+app\policies\bookpolicy::viewO
+EC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Policies\BookPolicy.php ("1*Í
+1! !(S
+Q
+ (
+$user"__id*6
+
+__unknown_file (
+
+$userapp\models\userS
+Q
+ (
+$book"__id*6
+
+__unknown_file (
+
+$bookapp\models\book"
+! !(
+true:$
+ (#
+$userapp\models\user:$
+% (/
+$bookapp\models\bookB
+app\policies\bookpolicyH

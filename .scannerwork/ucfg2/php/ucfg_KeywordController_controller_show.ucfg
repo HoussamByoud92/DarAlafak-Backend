@@ -1,0 +1,83 @@
+
+0app\http\controllers\api\keywordcontroller::showb
+XC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\KeywordController.php   ("1*Ô
+1" &(Ø
+¨
+" "(0
+%1"app\models\keyword::where*2
+
+__unknown_file ("
+app\models\keyword*$
+
+__unknown_file (
+slug*%
+
+__unknown_file (	
+
+$slug
+# %(
+%2"$Array∂
+≥
+# %(
+%3"__declareFunction*ç
+
+__unknown_file (qo
+m__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\KeywordController.php_35_31å
+â
+# %(
+%4"__mapSet*"
+
+__unknown_file (
+
+%2*%
+
+__unknown_file (	
+books*"
+
+__unknown_file (
+
+%3`^
+" %(
+%5*"
+
+__unknown_file (
+
+%1*"
+
+__unknown_file (
+
+%22withCA
+" &(
+%6*"
+
+__unknown_file (
+
+%52firstorfailB
+@
+" &(
+
+$keyword"__id*"
+
+__unknown_file (
+
+%664
+( ((,
+%7""app\http\resources\keywordresourceí
+è
+( ((,
+%8"/app\http\resources\keywordresource::__construct*"
+
+__unknown_file (
+
+%7*(
+
+__unknown_file (
+
+
+$keyword"
+( ((-
+
+%7:
+   (
+$slugB.,
+*app\http\controllers\api\keywordcontrollerH

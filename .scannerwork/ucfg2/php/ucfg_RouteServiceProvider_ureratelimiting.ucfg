@@ -1,0 +1,30 @@
+
+9app\providers\routeserviceprovider::configureratelimitingZ
+PC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Providers\RouteServiceProvider.php. .(,"1*@
+2
+RouteServiceProvider.php"
+3 3(
+implicit return*—
+10 2(®
+«
+0  2(	
+%1"__declareFunction*…
+
+__unknown_file (ig
+e__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Providers\RouteServiceProvider.php_48_32Ñ
+Î
+0 2(
+
+%2"+illuminate\support\facades\ratelimiter::for*F
+
+__unknown_file (*"(
+&illuminate\support\facades\ratelimiter*#
+
+__unknown_file (
+api*"
+
+__unknown_file (
+
+%1*
+2B&$
+"app\providers\routeserviceproviderH

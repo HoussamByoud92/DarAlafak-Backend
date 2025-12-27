@@ -1,0 +1,77 @@
+
+n__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\ContactController.php_217_26d
+XC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\ContactController.phpÙ Ù(""1*?
+2
+ContactController.php"!
+
+Ü Ü(
+implicit return*É
+1
+Ú Û(Bc
+a
+
+Ú, Ú(?
+%1"__concat*
+
+Ú, Ú(/
+%*
+
+Ú2 Ú(9
+	
+$search*
+
+Ú< Ú(?
+%²¯
+
+Ú Ú(@
+%2*"
+
+__unknown_file (
+
+$q*%
+
+__unknown_file (	
+email*%
+
+__unknown_file (	
+ILIKE*"
+
+__unknown_file (
+
+%12wherec
+a
+
+Û- Û(@
+%3"__concat*
+
+Û- Û(0
+%*
+
+Û3 Û(:
+	
+$search*
+
+Û= Û(@
+%³°
+
+Ú Û(A
+%4*"
+
+__unknown_file (
+
+%2*$
+
+__unknown_file (
+name*%
+
+__unknown_file (	
+ILIKE*"
+
+__unknown_file (
+
+%32orwhere*
+2:
+
+Ù$ Ù(&
+$qB.,
+*app\http\controllers\api\contactcontrollerH

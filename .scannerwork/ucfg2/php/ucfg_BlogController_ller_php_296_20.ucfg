@@ -1,0 +1,62 @@
+
+k__sonar_lambda_C:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\BlogController.php_296_20a
+UC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Controllers\Api\BlogController.php¨ ¨("1*<
+2
+BlogController.php"!
+
+« «(
+implicit return*æ
+1
+© ª(?R
+P
+
+©- ©(?
+%1"__id*6
+
+__unknown_file (*
+
+$post"
+category_id•’
+
+© ©(@
+%2*&
+
+__unknown_file (
+
+
+$query*+
+
+__unknown_file (
+category_id*"
+
+__unknown_file (
+
+%12whereP
+N
+
+ª- ª(=
+%3"__id*4
+
+__unknown_file (*
+
+$post"
+	author_id‘Ž
+
+© ª(>
+%4*"
+
+__unknown_file (
+
+%2*)
+
+__unknown_file (
+	author_id*"
+
+__unknown_file (
+
+%32orwhere*
+2:
+
+¨ ¨($
+$queryB+)
+'app\http\controllers\api\blogcontrollerH

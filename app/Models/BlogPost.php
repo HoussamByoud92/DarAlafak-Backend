@@ -2,21 +2,30 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 
-class BlogPost extends Model implements HasMedia
+class BlogPost extends Model
 {
-    use HasFactory, HasSlug, InteractsWithMedia;
+    use SoftDeletes;
 
     protected $fillable = [
-        'title', 'slug', 'content', 'excerpt',
-        'author_id', 'category_id', 'is_published', 'is_featured',
-        'views_count', 'published_at', 'tags'
+        'title',
+        'slug',
+        'excerpt',
+        'content',
+        'featured_image',
+        'category_id',
+        'author_id',
+        'is_published',
+        'is_featured',
+        'published_at',
+        'views_count',
+        'read_time',
+        'tags',
+        'meta_title',
+        'meta_description',
     ];
 
     protected $casts = [
@@ -26,30 +35,32 @@ class BlogPost extends Model implements HasMedia
         'tags' => 'array',
     ];
 
-    public function getSlugOptions(): SlugOptions
+    protected static function boot()
     {
-        return SlugOptions::create()
-            ->generateSlugsFrom('title')
-            ->saveSlugsTo('slug');
+        parent::boot();
+
+        static::creating(function ($post) {
+            if (empty($post->slug)) {
+                $post->slug = Str::slug($post->title);
+            }
+            $post->read_time = ceil(str_word_count(strip_tags($post->content ?? '')) / 200);
+        });
+
+        static::updating(function ($post) {
+            $post->read_time = ceil(str_word_count(strip_tags($post->content ?? '')) / 200);
+        });
     }
 
-    public function registerMediaCollections(): void
+    public function category()
     {
-        $this->addMediaCollection('featured_image')->singleFile();
+        return $this->belongsTo(BlogCategory::class, 'category_id');
     }
 
-    // Relationships
     public function author()
     {
         return $this->belongsTo(User::class, 'author_id');
     }
 
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
-    }
-
-    // Scopes
     public function scopePublished($query)
     {
         return $query->where('is_published', true);

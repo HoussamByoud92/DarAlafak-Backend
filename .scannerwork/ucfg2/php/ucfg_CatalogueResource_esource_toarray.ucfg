@@ -1,0 +1,268 @@
+
+-app\http\resources\catalogueresource::toarray\
+RC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Resources\CatalogueResource.php	 	("1*∂
+1 (
+
+ (	
+%1"$Arrayf
+d
+ (
+%2"__id*L
+
+__unknown_file (0*.&
+$app\http\resources\catalogueresource"
+idâ
+Ü
+ (	
+%3"__mapSet*"
+
+__unknown_file (
+
+%1*"
+
+__unknown_file (
+id*"
+
+__unknown_file (
+
+%2h
+f
+ (!
+%4"__id*N
+
+__unknown_file (2*0&
+$app\http\resources\catalogueresource"
+nameã
+à
+ (	
+%5"__mapSet*"
+
+__unknown_file (
+
+%1*$
+
+__unknown_file (
+name*"
+
+__unknown_file (
+
+%4h
+f
+ (!
+%6"__id*N
+
+__unknown_file (2*0&
+$app\http\resources\catalogueresource"
+slugã
+à
+ (	
+%7"__mapSet*"
+
+__unknown_file (
+
+%1*$
+
+__unknown_file (
+slug*"
+
+__unknown_file (
+
+%6m
+k
+ (+
+%8"__id*S
+
+__unknown_file (7*5&
+$app\http\resources\catalogueresource"
+	file_pathê
+ç
+ (	
+%9"__mapSet*"
+
+__unknown_file (
+
+%1*)
+
+__unknown_file (
+	file_path*"
+
+__unknown_file (
+
+%8n
+l
+ (+
+%10"__id*S
+
+__unknown_file (7*5&
+$app\http\resources\catalogueresource"
+	file_sizeí
+è
+ (	
+%11"__mapSet*"
+
+__unknown_file (
+
+%1*)
+
+__unknown_file (
+	file_size*#
+
+__unknown_file (
+
+%10n
+l
+ (+
+%12"__id*S
+
+__unknown_file (7*5&
+$app\http\resources\catalogueresource"
+	file_typeí
+è
+ (	
+%13"__mapSet*"
+
+__unknown_file (
+
+%1*)
+
+__unknown_file (
+	file_type*#
+
+__unknown_file (
+
+%12p
+n
+ (/
+%14"__id*U
+
+__unknown_file (9*7&
+$app\http\resources\catalogueresource"
+descriptionî
+ë
+ (	
+%15"__mapSet*"
+
+__unknown_file (
+
+%1*+
+
+__unknown_file (
+description*#
+
+__unknown_file (
+
+%14n
+l
+ (+
+%16"__id*S
+
+__unknown_file (7*5&
+$app\http\resources\catalogueresource"
+	is_activeí
+è
+ (	
+%17"__mapSet*"
+
+__unknown_file (
+
+%1*)
+
+__unknown_file (
+	is_active*#
+
+__unknown_file (
+
+%16s
+q
+  (5
+%18"__id*X
+
+__unknown_file (<*:&
+$app\http\resources\catalogueresource"
+download_countó
+î
+ (	
+%19"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+download_count*#
+
+__unknown_file (
+
+%18o
+m
+ (-
+%20"__id*T
+
+__unknown_file (8*6&
+$app\http\resources\catalogueresource"
+
+created_atmk
+ (D
+%21*#
+
+__unknown_file (
+
+%20*+
+
+__unknown_file (
+Y-m-d H:i:s2formatì
+ê
+ (	
+%22"__mapSet*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+created_at*#
+
+__unknown_file (
+
+%21o
+m
+ (-
+%23"__id*T
+
+__unknown_file (8*6&
+$app\http\resources\catalogueresource"
+
+updated_atmk
+ (D
+%24*#
+
+__unknown_file (
+
+%23*+
+
+__unknown_file (
+Y-m-d H:i:s2formatì
+ê
+ (	
+%25"__mapSet*"
+
+__unknown_file (
+
+%1**
+
+__unknown_file (
+
+updated_at*#
+
+__unknown_file (
+
+%24"
+ (
+
+
+%1:
+	 	($
+
+$requestB(&
+$app\http\resources\catalogueresourceH

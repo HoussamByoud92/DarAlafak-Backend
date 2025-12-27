@@ -1,0 +1,25 @@
+
+ app\policies\orderpolicy::deleteP
+FC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Policies\OrderPolicy.phpB B("1*Ñ
+1D D(S
+Q
+B B(
+$user"__id*6
+
+__unknown_file (
+
+$userapp\models\userV
+T
+B B(
+$order"__id*8
+
+__unknown_file (
+
+$orderapp\models\order"
+D D(	
+false:$
+B B(%
+$userapp\models\user:&
+B' B(3
+$orderapp\models\orderB
+app\policies\orderpolicyH

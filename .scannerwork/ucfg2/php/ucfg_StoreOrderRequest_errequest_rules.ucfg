@@ -1,0 +1,181 @@
+
+*app\http\requests\storeorderrequest::rules[
+QC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Http\Requests\StoreOrderRequest.php ("1*‡
+1 (
+
+ (	
+%1"$Array©
+¦
+ (	
+%2"__mapSet*"
+
+__unknown_file (
+
+%1*-
+
+__unknown_file (
+customer_name*7
+
+__unknown_file (
+required|string|max:255©
+¦
+ (	
+%3"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+customer_email*6
+
+__unknown_file (
+required|email|max:254©
+¦
+ (	
+%4"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+customer_phone*6
+
+__unknown_file (
+nullable|string|max:20¤
+¡
+ (	
+%5"__mapSet*"
+
+__unknown_file (
+
+%1*0
+
+__unknown_file (
+shipping_address*/
+
+__unknown_file (
+required|string©
+¦
+ (	
+%6"__mapSet*"
+
+__unknown_file (
+
+%1*-
+
+__unknown_file (
+shipping_city*7
+
+__unknown_file (
+required|string|max:100¯
+¬
+ (	
+%7"__mapSet*"
+
+__unknown_file (
+
+%1*4
+
+__unknown_file (
+shipping_postal_code*6
+
+__unknown_file (
+nullable|string|max:20¬
+©
+ (	
+%8"__mapSet*"
+
+__unknown_file (
+
+%1*0
+
+__unknown_file (
+shipping_country*7
+
+__unknown_file (
+nullable|string|max:100™
+–
+ (	
+%9"__mapSet*"
+
+__unknown_file (
+
+%1*%
+
+__unknown_file (	
+notes*/
+
+__unknown_file (
+nullable|string¥
+¢
+ (	
+%10"__mapSet*"
+
+__unknown_file (
+
+%1*0
+
+__unknown_file (
+whatsapp_message*/
+
+__unknown_file (
+nullable|stringÊ
+Ç
+ (	
+%11"__mapSet*"
+
+__unknown_file (
+
+%1*.
+
+__unknown_file (
+payment_method*V
+
+__unknown_file (:8
+6nullable|in:cash_on_delivery,bank_transfer,credit_cardŸ
+œ
+ (	
+%12"__mapSet*"
+
+__unknown_file (
+
+%1*%
+
+__unknown_file (	
+items*4
+
+__unknown_file (
+required|array|min:1­
+ª
+ (	
+%13"__mapSet*"
+
+__unknown_file (
+
+%1*/
+
+__unknown_file (
+items.*.book_id*8
+
+__unknown_file (
+required|exists:books,id¬
+©
+ (	
+%14"__mapSet*"
+
+__unknown_file (
+
+%1*0
+
+__unknown_file (
+items.*.quantity*6
+
+__unknown_file (
+required|integer|min:1"
+ (
+
+
+%1B'%
+#app\http\requests\storeorderrequestH

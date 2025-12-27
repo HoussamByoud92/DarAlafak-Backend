@@ -1,0 +1,25 @@
+
+$app\policies\bookpolicy::forcedeleteO
+EC:\Users\byoud\OneDrive\Desktop\DarAlafak\app\Policies\BookPolicy.phpZ Z("1*Î
+1\ \(S
+Q
+Z Z(
+$user"__id*6
+
+__unknown_file (
+
+$userapp\models\userS
+Q
+Z Z(
+$book"__id*6
+
+__unknown_file (
+
+$bookapp\models\book"
+\ \(	
+false:$
+Z  Z(*
+$userapp\models\user:$
+Z, Z(6
+$bookapp\models\bookB
+app\policies\bookpolicyH
