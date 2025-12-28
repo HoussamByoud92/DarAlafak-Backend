@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\BlogPostResource;
 use App\Models\BlogPost;
+use App\Services\CloudinaryService;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -135,10 +135,10 @@ class BlogController extends Controller
         // Auto-set author from authenticated user
         $validated['author_id'] = auth()->id();
 
-        // Handle file upload
+        // Handle file upload to Cloudinary
         if ($request->hasFile('featured_image')) {
-            $validated['featured_image'] = $request->file('featured_image')
-                ->store('blog', 'public');
+            $result = CloudinaryService::upload($request->file('featured_image'), 'blog');
+            $validated['featured_image'] = $result['url'];
         }
 
         // Set published_at if publishing
@@ -180,14 +180,17 @@ class BlogController extends Controller
             $validated['is_featured'] = filter_var($request->is_featured, FILTER_VALIDATE_BOOLEAN);
         }
 
-        // Handle file upload
+        // Handle file upload to Cloudinary
         if ($request->hasFile('featured_image')) {
-            // Delete old image
+            // Delete old image from Cloudinary if exists
             if ($blog->featured_image) {
-                Storage::disk('public')->delete($blog->featured_image);
+                $publicId = CloudinaryService::getPublicIdFromUrl($blog->featured_image);
+                if ($publicId) {
+                    CloudinaryService::delete($publicId);
+                }
             }
-            $validated['featured_image'] = $request->file('featured_image')
-                ->store('blog', 'public');
+            $result = CloudinaryService::upload($request->file('featured_image'), 'blog');
+            $validated['featured_image'] = $result['url'];
         }
 
         // Set published_at if publishing for first time
@@ -206,9 +209,12 @@ class BlogController extends Controller
     public function destroy(BlogPost $blog): JsonResponse
     {
         try {
-            // Delete featured image if exists
+            // Delete featured image from Cloudinary if exists
             if ($blog->featured_image) {
-                Storage::disk('public')->delete($blog->featured_image);
+                $publicId = CloudinaryService::getPublicIdFromUrl($blog->featured_image);
+                if ($publicId) {
+                    CloudinaryService::delete($publicId);
+                }
             }
 
             $blog->delete();

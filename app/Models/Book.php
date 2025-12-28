@@ -17,12 +17,33 @@ class Book extends Model implements HasMedia
     use HasFactory, HasSlug, InteractsWithMedia, LogsActivity;
 
     protected $fillable = [
-        'title', 'slug', 'isbn', 'price', 'discount_price', 'pages',
-        'description', 'summary', 'front_image', 'back_image',
-        'is_published', 'is_available', 'is_featured', 'stock_quantity',
-        'weight', 'dimensions', 'language', 'publication_date', 'edition',
-        'category_id', 'physical_format_id', 'publisher_id', 'serie_id',
-        'views_count', 'sales_count', 'rating', 'reviews_count'
+        'title',
+        'slug',
+        'isbn',
+        'price',
+        'discount_price',
+        'pages',
+        'description',
+        'summary',
+        'front_image',
+        'back_image',
+        'is_published',
+        'is_available',
+        'is_featured',
+        'stock_quantity',
+        'weight',
+        'dimensions',
+        'language',
+        'publication_date',
+        'edition',
+        'category_id',
+        'physical_format_id',
+        'publisher_id',
+        'serie_id',
+        'views_count',
+        'sales_count',
+        'rating',
+        'reviews_count'
     ];
 
     protected $casts = [
@@ -98,8 +119,7 @@ class Book extends Model implements HasMedia
 
     public function keywords()
     {
-        return $this->belongsToMany(Keyword::class, 'book_keywords')
-            ->withTimestamps();
+        return $this->belongsToMany(Keyword::class, 'book_keywords');
     }
 
     public function reviews()
@@ -131,7 +151,7 @@ class Book extends Model implements HasMedia
     // Accessors
     public function getFinalPriceAttribute()
     {
-        return ($this->price)-($this->discount_price) ?? $this->price;
+        return ($this->price) - ($this->discount_price) ?? $this->price;
     }
 
     public function getDiscountPercentageAttribute()
@@ -151,45 +171,33 @@ class Book extends Model implements HasMedia
     }
 
     // In your Book model (Book.php)
-public function getFrontImageUrlAttribute()
-{
-    if (!$this->front_image) {
-        return null;
-    }
-    
-    // If it's already a URL, return it
-    if (filter_var($this->front_image, FILTER_VALIDATE_URL)) {
-        return $this->front_image;
-    }
-    
-    // If it's a full path, extract just the filename
-    if (str_contains($this->front_image, DIRECTORY_SEPARATOR)) {
-        $filename = basename($this->front_image);
-        return asset('storage/' . $filename);
-    }
-    
-    // Assume it's already a relative path
-    return asset('storage/' . $this->front_image);
-}
+    public function getFrontImageUrlAttribute()
+    {
+        if (!$this->front_image) {
+            return null;
+        }
 
-public function getBackImageUrlAttribute()
-{
-    if (!$this->back_image) {
-        return null;
+        // If it's already a full URL (Cloudinary), return as-is
+        if (str_starts_with($this->front_image, 'http')) {
+            return $this->front_image;
+        }
+
+        // Otherwise, it's a local storage path
+        return config('app.url') . '/storage/' . ltrim($this->front_image, '/');
     }
-    
-    // If it's already a URL, return it
-    if (filter_var($this->back_image, FILTER_VALIDATE_URL)) {
-        return $this->back_image;
+
+    public function getBackImageUrlAttribute()
+    {
+        if (!$this->back_image) {
+            return null;
+        }
+
+        // If it's already a full URL (Cloudinary), return as-is
+        if (str_starts_with($this->back_image, 'http')) {
+            return $this->back_image;
+        }
+
+        // Otherwise, it's a local storage path
+        return config('app.url') . '/storage/' . ltrim($this->back_image, '/');
     }
-    
-    // If it's a full path, extract just the filename
-    if (str_contains($this->back_image, DIRECTORY_SEPARATOR)) {
-        $filename = basename($this->back_image);
-        return asset('storage/' . $filename);
-    }
-    
-    // Assume it's already a relative path
-    return asset('storage/' . $this->back_image);
-}
 }

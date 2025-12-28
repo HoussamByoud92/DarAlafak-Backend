@@ -21,9 +21,7 @@ class BlogPostResource extends JsonResource
             'slug' => $this->slug,
             'excerpt' => $this->excerpt,
             'content' => $this->content,
-            'featured_image' => $this->featured_image
-                ? config('app.url') . Storage::url($this->featured_image)
-                : null,
+            'featured_image' => $this->getFeaturedImageUrl(),
             'author' => $this->whenLoaded('author', function () {
                 return [
                     'id' => $this->author->id,
@@ -52,5 +50,24 @@ class BlogPostResource extends JsonResource
             'created_at' => $this->created_at?->toIso8601String(),
             'updated_at' => $this->updated_at?->toIso8601String(),
         ];
+    }
+
+    /**
+     * Get the featured image URL.
+     * Handles both Cloudinary URLs (full URLs) and local storage paths.
+     */
+    protected function getFeaturedImageUrl(): ?string
+    {
+        if (!$this->featured_image) {
+            return null;
+        }
+
+        // If it's already a full URL (Cloudinary), return as-is
+        if (str_starts_with($this->featured_image, 'http')) {
+            return $this->featured_image;
+        }
+
+        // Otherwise, it's a local storage path
+        return config('app.url') . Storage::url($this->featured_image);
     }
 }

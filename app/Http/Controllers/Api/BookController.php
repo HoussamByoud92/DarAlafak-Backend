@@ -7,6 +7,7 @@ use App\Models\Book;
 use App\Http\Resources\BookResource;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
+use App\Services\CloudinaryService;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -77,19 +78,30 @@ class BookController extends Controller
             $book->keywords()->sync($request->keyword_ids);
         }
 
-        // Handle file uploads properly using Laravel's storage system
-        if ($request->hasFile('front_image')) {
-            $path = $request->file('front_image')->store('books', 'public');
-            $book->front_image = $path;
-        }
+        // Handle file uploads to Cloudinary
+        try {
+            if ($request->hasFile('front_image')) {
+                \Log::info('Uploading front_image to Cloudinary');
+                $result = CloudinaryService::upload($request->file('front_image'), 'books');
+                $book->front_image = $result['url'];
+                \Log::info('Front image uploaded: ' . $result['url']);
+            } else {
+                \Log::info('No front_image file in request');
+            }
 
-        if ($request->hasFile('back_image')) {
-            $path = $request->file('back_image')->store('books', 'public');
-            $book->back_image = $path;
+            if ($request->hasFile('back_image')) {
+                \Log::info('Uploading back_image to Cloudinary');
+                $result = CloudinaryService::upload($request->file('back_image'), 'books');
+                $book->back_image = $result['url'];
+                \Log::info('Back image uploaded: ' . $result['url']);
+            }
+        } catch (\Exception $e) {
+            \Log::error('Cloudinary upload error: ' . $e->getMessage());
+            // Continue without failing - images will be null
         }
 
         // Save the image paths if any were uploaded
-        if ($request->hasFile('front_image') || $request->hasFile('back_image')) {
+        if ($book->front_image || $book->back_image) {
             $book->save();
         }
 
@@ -98,6 +110,8 @@ class BookController extends Controller
 
     public function update(UpdateBookRequest $request, Book $book)
     {
+        \Log::info('BookController@update called for book ID: ' . $book->id);
+
         // Exclude file fields from validated data to prevent temp paths being saved
         $data = collect($request->validated())->except(['front_image', 'back_image'])->toArray();
 
@@ -112,27 +126,43 @@ class BookController extends Controller
             $book->keywords()->sync($request->keyword_ids);
         }
 
-        // Handle file uploads properly using Laravel's storage system
-        if ($request->hasFile('front_image')) {
-            // Delete old image if it exists
-            if ($book->front_image && \Storage::disk('public')->exists($book->front_image)) {
-                \Storage::disk('public')->delete($book->front_image);
+        // Handle file uploads to Cloudinary
+        try {
+            if ($request->hasFile('front_image')) {
+                \Log::info('UPDATE: Uploading front_image to Cloudinary');
+                // Delete old image from Cloudinary if exists
+                if ($book->front_image) {
+                    $publicId = CloudinaryService::getPublicIdFromUrl($book->front_image);
+                    if ($publicId) {
+                        CloudinaryService::delete($publicId);
+                    }
+                }
+                $result = CloudinaryService::upload($request->file('front_image'), 'books');
+                $book->front_image = $result['url'];
+                \Log::info('UPDATE: Front image uploaded: ' . $result['url']);
+            } else {
+                \Log::info('UPDATE: No front_image file in request. All files: ' . json_encode($request->allFiles()));
             }
-            $path = $request->file('front_image')->store('books', 'public');
-            $book->front_image = $path;
-        }
 
-        if ($request->hasFile('back_image')) {
-            // Delete old image if it exists
-            if ($book->back_image && \Storage::disk('public')->exists($book->back_image)) {
-                \Storage::disk('public')->delete($book->back_image);
+            if ($request->hasFile('back_image')) {
+                \Log::info('UPDATE: Uploading back_image to Cloudinary');
+                // Delete old image from Cloudinary if exists
+                if ($book->back_image) {
+                    $publicId = CloudinaryService::getPublicIdFromUrl($book->back_image);
+                    if ($publicId) {
+                        CloudinaryService::delete($publicId);
+                    }
+                }
+                $result = CloudinaryService::upload($request->file('back_image'), 'books');
+                $book->back_image = $result['url'];
+                \Log::info('UPDATE: Back image uploaded: ' . $result['url']);
             }
-            $path = $request->file('back_image')->store('books', 'public');
-            $book->back_image = $path;
+        } catch (\Exception $e) {
+            \Log::error('UPDATE: Cloudinary upload error: ' . $e->getMessage());
         }
 
         // Save the image paths if any were uploaded
-        if ($request->hasFile('front_image') || $request->hasFile('back_image')) {
+        if ($book->front_image || $book->back_image) {
             $book->save();
         }
 
@@ -141,6 +171,20 @@ class BookController extends Controller
 
     public function destroy(Book $book)
     {
+        // Delete images from Cloudinary
+        if ($book->front_image) {
+            $publicId = CloudinaryService::getPublicIdFromUrl($book->front_image);
+            if ($publicId) {
+                CloudinaryService::delete($publicId);
+            }
+        }
+        if ($book->back_image) {
+            $publicId = CloudinaryService::getPublicIdFromUrl($book->back_image);
+            if ($publicId) {
+                CloudinaryService::delete($publicId);
+            }
+        }
+
         $book->delete();
         return response()->json(['message' => 'Book deleted successfully']);
     }

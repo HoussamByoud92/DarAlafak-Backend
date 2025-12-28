@@ -20,8 +20,8 @@ class BookResource extends JsonResource
             'pages' => $this->pages,
             'description' => $this->description,
             'summary' => $this->summary,
-            'front_image' => $this->getFirstMediaUrl('front_cover') ?: null,
-            'back_image'  => $this->getFirstMediaUrl('back_cover') ?: null,
+            'front_image' => $this->front_image_url,
+            'back_image' => $this->back_image_url,
             'is_published' => $this->is_published,
             'is_available' => $this->is_available,
             'is_featured' => $this->is_featured,
@@ -37,7 +37,7 @@ class BookResource extends JsonResource
             'reviews_count' => $this->reviews_count,
             'created_at' => $this->created_at->format('Y-m-d H:i:s'),
             'updated_at' => $this->updated_at->format('Y-m-d H:i:s'),
-            
+
             // Relationships
             'category' => new CategoryResource($this->whenLoaded('category')),
             'publisher' => new PublisherResource($this->whenLoaded('publisher')),
